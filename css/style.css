@@ -136,6 +136,10 @@ h1.main_title {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.background-white {
+  background-color: white;
+}
+
 /* IMG */
 
 .img-logo-brand {
@@ -143,14 +147,10 @@ h1.main_title {
   height: 16px;
 }
 
-.img-icon64 {
-  width: 64px;
-  height: 64px;
-}
-
 .img-icon128 {
   width: 128px;
   height: 128px;
+  border-radius: 16px;
 }
 
 .img-badge {
