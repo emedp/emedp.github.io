@@ -7,6 +7,13 @@ NEGRO:
 GRIS: #121212
 */
 
+/* FONTS */
+
+@font-face {
+  font-family: Iceland;
+  src: url(assets/fonts/Iceland-Regular.ttf);
+}
+
 /* HTML BASIC TAGS */
 
 body {
@@ -34,7 +41,7 @@ footer {
 
 h1, h2, h3, h4, h5, h6 {
   color: white;
-  font-family: Iceland;
+  font-family: Iceland, Arial, Helvetica, sans-serif;
 }
 
 h1 {
@@ -61,7 +68,7 @@ p, a, li {
 }
 
 p {
-  text-align: justify;
+  text-align: left;
   margin: auto;
 }
 
