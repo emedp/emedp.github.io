@@ -1,27 +1,13 @@
-/* CSS BASIC */
-
-/* COLOR PALETTE */
 
 /*
-AZUL: material cyan A400
-#00E5FF
-GRIS:
-#212121
 BLANCO:
 #FFFFFF
 NEGRO:
 #000000
-https://coolors.co/gradient-maker/60efff-00ff87
-https://www.google.com/search?q=verde+azul+neon&tbm=isch&ved=2ahUKEwiDqYjy_cj2AhXFyCoKHbbVBpMQ2-cCegQIABAA&oq=verde+azul+neon&gs_lcp=CgNpbWcQAzIGCAAQCBAeMgYIABAIEB4yBggAEAgQHjoHCCMQ7wMQJzoECAAQQzoFCAAQgAQ6BggAEAcQHjoHCAAQsQMQQzoICAAQsQMQgwE6CAgAEIAEELEDOgYIABAFEB5Q8AdYrRdgpRloAHAAeACAAW-IAcwLkgEEMTQuMpgBAKABAaoBC2d3cy13aXotaW1nwAEB&sclient=img&ei=wfowYsPEOsWRqwG2q5uYCQ&bih=939&biw=1879&client=opera-gx&hs=HFx
-
+GRIS: #121212
 */
 
-/* FONTS */
-
-@font-face {
-  font-family: "Iceland";
-  src: url("../fonts/Iceland.ttf");
-}
+/* HTML BASIC TAGS */
 
 body {
   margin: 0;
@@ -29,22 +15,21 @@ body {
   text-align: center;
 }
 
+main {
+  padding: 0em 2em 3em;
+}
+
 header {
   background-color: black;
   position: sticky;
   top: 0;
-  padding: 16px;
-  text-align: center;
-}
-
-main {
-  margin: 32px;
+  padding: 2em;
 }
 
 footer {
   background-color: black;
-  padding: 16px;
-  text-align: center;
+  padding-top: 1em;
+  padding-bottom: 4em;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -53,25 +38,45 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: xx-large;
-  margin: auto;
-  display: inline-block;
+  font-size: 4em;
 }
 
 h2 {
-  font-size: x-large;
+  font-size: 3em;
 }
 
 h3 {
-  font-size: large;
+  font-size: 2em;
 }
 
+h4 {
+  font-size: 1.5em;
+}
+
+p, a, li {
+  text-align: left;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 500px;
+}
+
+p {
+  text-align: justify;
+  margin: auto;
+}
+
+ul {
+  width: fit-content;
+    margin: auto;
+}
+
+/*
 button {
-  padding: 16px 32px;
-  border-radius: 8px;
+  padding: 1em 2em;
+  border-radius: 4px;
   color: white;
   background-color: black;
-  border: 1px solid white;
+  border: solid 1px lightskyblue;
 }
 
 button:hover {
@@ -79,24 +84,13 @@ button:hover {
   color: black;
   background-color: lightskyblue;
 }
+*/
 
-button:active {
-  color: black;
-  background-color: lightskyblue;
-}
+/* IDENTIFIERS */
 
-p, a, li, button {
-  color: white;
-  font-family: monospace;
-  font-size: 18px;
-}
-
-p, ul {
-  text-align: left;
-  width: fit-content;
-  max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
+#welcome {
+  background-color: #313131;
+  padding: 1em 2em 3em;
 }
 
 /* CLASSES */
@@ -104,62 +98,66 @@ p, ul {
 h1.main_title {
   white-space: nowrap;
   width: 100%;
+  margin: auto;
+  text-align: center;
   font-size: 4em;
-  position: sticky;
-  top: 0;
 }
 
 .console {
-  color: lightskyblue;
   white-space: nowrap;
-}
-
-.nav-item {
-  color: white;
-  font-family: Iceland;
-  font-size: 2em;
-  text-decoration: none;
-  padding: 16px;
-}
-
-.nav-item:hover {
+  width: 100%;
+  margin: auto;
+  text-align: center;
   color: lightskyblue;
 }
 
-.contact-link {
-  display: block;
-  margin: auto;
-  margin-top: 16px;
-  margin-bottom: 16px;
-  width: 50%;
-  padding: 16px;
-  border-radius: 8px;
-
-  color: white;
-  text-align: center;
-  text-decoration: none;
-  font-family: Arial, Helvetica, sans-serif;
+.columned {
+  display: inline-block;
+  vertical-align: text-top;
+  margin: 1em;
 }
 
-.background-logo {
+.rrss_link {
+  width: 32px;
+  height: 32px;
+  padding: 16px;
+  margin: 16px;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+.project_description {
+  text-align: center;
+}
+
+.background_logo {
   background-color: white;
+  vertical-align: top;
+  text-align: center;
   display: inline-block;
   margin: auto;
-  margin-top: 20px;
+  margin-bottom: 2em;
   border-radius:16px;
+}
+
+.logo_brand {
+  display: inline-block;
+  vertical-align: middle;
+  width: 30%;
 }
 
 /* IMG */
 
 .img-logo-brand {
-  width: 16px;
-  height: 16px;
+  width: 32px;
+  height: 32px;
 }
 
 .img-icon128 {
   width: 128px;
   height: 128px;
   border-radius: 16px;
+  margin-bottom: 16px;
 }
 
 .img-badge {
@@ -167,9 +165,7 @@ h1.main_title {
   height: 100px;
 }
 
-.logo_brand {
-  max-width: 30%;
-}
+
 
 /* ANIMS */
 
