@@ -33,6 +33,10 @@ header {
   padding: 2em;
 }
 
+section {
+  padding: 3em 2em 3em;
+}
+
 footer {
   background-color: black;
   padding-top: 1em;
@@ -97,7 +101,10 @@ button:hover {
 
 #welcome {
   background-color: #313131;
-  padding: 1em 2em 3em;
+}
+
+#CV {
+  background-color: #313131;
 }
 
 /* CLASSES */
@@ -114,8 +121,17 @@ h1.main_title {
   white-space: nowrap;
   width: 100%;
   margin: auto;
+  margin-top: 16px;
   text-align: center;
   color: lightskyblue;
+}
+
+@keyframes typing {
+  from {width: 0;}
+}
+
+@keyframes blink {
+  50% {border-color: transparent;}
 }
 
 .columned {
