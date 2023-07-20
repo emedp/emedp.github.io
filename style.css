@@ -27,7 +27,6 @@ body {
   position: sticky;
   top: 0;
   padding: 2em;
-  z-index: 999;
 }
 
 
@@ -91,8 +90,6 @@ section {
 
 #welcome_arrow {
   font-size: 4em;
-  position: absolute;
-  bottom: 10px;
 }
 
 #projects {
@@ -139,8 +136,8 @@ h1.main_title {
 }
 
 .columned {
-  height: 600px;
-  max-width: 50vh;
+  min-height: 700px;
+  max-width: 500px;
   border-radius: 24px;
   background-color: var(--bg-grey-light);
   display: inline-block;
