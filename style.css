@@ -1,6 +1,6 @@
 /* VARIABLES */
 :root {
-  --primary-color: rgb(255, 100, 0);
+  --primary-color: rgb(0, 174, 255);
   --console-color: rgb(0, 255, 0);
   --bg-grey-dark: #121212;
   --bg-grey-light: #313131;
@@ -21,7 +21,8 @@ body {
   background-color: var(--bg-grey-light);
 }
 
-header {
+#header {
+  border-bottom: white solid 1px;
   background-color: black;
   position: sticky;
   top: 0;
@@ -96,6 +97,13 @@ section {
 
 /* CLASSES */
 
+.glow {
+  text-shadow:
+    0px 0px 05px var(--primary-color),
+    0px 0px 10px var(--primary-color),
+    0px 0px 15px var(--primary-color);
+}
+
 h1.main_title {
   white-space: nowrap;
   width: 100%;
@@ -108,9 +116,10 @@ h1.main_title {
   white-space: nowrap;
   width: 100%;
   margin: auto;
-  margin-top: 16px;
-  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.5em;
   color: var(--console-color);
+  text-align: center;
 }
 
 .columned {
