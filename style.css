@@ -22,10 +22,6 @@ body {
   text-align: center;
 }
 
-main {
-  padding: 0em 2em 3em;
-}
-
 header {
   background-color: black;
   position: sticky;
@@ -34,13 +30,11 @@ header {
 }
 
 section {
-  padding: 3em 2em 3em;
+  padding: 2em 2em 8em;
 }
 
 footer {
   background-color: black;
-  padding-top: 1em;
-  padding-bottom: 4em;
 }
 
 h1, h2, h3, h4, h5, h6 {
