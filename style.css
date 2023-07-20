@@ -55,7 +55,6 @@ p, a, li {
   text-align: left;
   color: white;
   font-family: Arial, Helvetica, sans-serif;
-  max-width: 500px;
 }
 
 p {
@@ -68,21 +67,6 @@ ul {
     margin: auto;
 }
 
-/*
-button {
-  padding: 1em 2em;
-  border-radius: 4px;
-  color: white;
-  background-color: black;
-  border: solid 1px lightskyblue;
-}
-
-button:hover {
-  cursor: pointer;
-  color: black;
-  background-color: lightskyblue;
-}
-*/
 
 /* SECTIONS */
 
@@ -110,8 +94,6 @@ section {
   background-color: black;
 }
 
-
-
 /* CLASSES */
 
 h1.main_title {
@@ -129,14 +111,6 @@ h1.main_title {
   margin-top: 16px;
   text-align: center;
   color: var(--console-color);
-}
-
-@keyframes typing {
-  from {width: 0;}
-}
-
-@keyframes blink {
-  50% {border-color: transparent;}
 }
 
 .columned {
@@ -193,16 +167,24 @@ h1.main_title {
   height: 100px;
 }
 
-
-
 /* ANIMS */
 
 .anim-blink {
     animation: blink 1s infinite;
 }
 
-/* The typewriter cursor effect */
 @keyframes blink {
-  from { color: transparent }
-  to { color: var(--console-color); }
+  0% {
+    border-color: transparent;
+    color: transparent;
+  }
+  50% {
+    border-color: var(--console-color);
+    color: var(--console-color);
+  }
+
+  100% {
+    border-color: transparent;
+    color: transparent;
+  }
 }
