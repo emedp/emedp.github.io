@@ -1,11 +1,10 @@
-
-/*
-BLANCO:
-#FFFFFF
-NEGRO:
-#000000
-GRIS: #121212
-*/
+/* VARIABLES */
+:root {
+  --primary-color: rgb(255, 100, 0);
+  --console-color: rgb(0, 255, 0);
+  --bg-grey-dark: #121212;
+  --bg-grey-light: #313131;
+}
 
 /* FONTS */
 
@@ -18,8 +17,8 @@ GRIS: #121212
 
 body {
   margin: 0;
-  background-color: #121212;
   text-align: center;
+  background-color: var(--bg-grey-light);
 }
 
 header {
@@ -29,13 +28,7 @@ header {
   padding: 2em;
 }
 
-section {
-  padding: 2em 2em 8em;
-}
 
-footer {
-  background-color: black;
-}
 
 h1, h2, h3, h4, h5, h6 {
   color: white;
@@ -91,15 +84,33 @@ button:hover {
 }
 */
 
-/* IDENTIFIERS */
+/* SECTIONS */
+
+section {
+  padding: 2em 2em 8em;
+}
 
 #welcome {
-  background-color: #313131;
+  background-color: black;
+}
+
+#projects {
+  background-color: var(--bg-grey-dark);
 }
 
 #CV {
-  background-color: #313131;
+  background-color: var(--bg-grey-light);
 }
+
+#emedpware {
+  background-color: var(--bg-grey-dark);
+}
+
+#rrss {
+  background-color: black;
+}
+
+
 
 /* CLASSES */
 
@@ -117,7 +128,7 @@ h1.main_title {
   margin: auto;
   margin-top: 16px;
   text-align: center;
-  color: lightskyblue;
+  color: var(--console-color);
 }
 
 @keyframes typing {
@@ -193,5 +204,5 @@ h1.main_title {
 /* The typewriter cursor effect */
 @keyframes blink {
   from { color: transparent }
-  to { color: lightskyblue; }
+  to { color: var(--console-color); }
 }
