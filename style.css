@@ -27,6 +27,7 @@ body {
   position: sticky;
   top: 0;
   padding: 2em;
+  z-index: 999;
 }
 
 
@@ -68,7 +69,6 @@ ul {
     margin: auto;
 }
 
-
 /* SECTIONS */
 
 section {
@@ -77,6 +77,22 @@ section {
 
 #welcome {
   background-color: black;
+  height: 65vh;
+}
+#welcome_title, #welcome_body {
+  color: var(--console-color);
+}
+
+#welcome_body {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.5em;
+  max-width: fit-content;
+}
+
+#welcome_arrow {
+  font-size: 4em;
+  position: absolute;
+  bottom: 10px;
 }
 
 #projects {
