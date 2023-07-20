@@ -60,7 +60,7 @@ p, a, li {
 }
 
 p {
-  text-align: left;
+  width: fit-content;
   margin: auto;
 }
 
@@ -139,9 +139,14 @@ h1.main_title {
 }
 
 .columned {
+  height: 600px;
+  max-width: 50vh;
+  border-radius: 24px;
+  background-color: var(--bg-grey-light);
   display: inline-block;
-  vertical-align: text-top;
+  vertical-align: top;
   margin: 1em;
+  padding: 2em;
 }
 
 .rrss_link {
