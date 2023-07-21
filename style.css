@@ -25,6 +25,13 @@
   text-shadow: 0px 0px 10px var(--console-color);
 }
 
+.glow {
+  text-shadow:
+    0px 0px 05px var(--primary-color),
+    0px 0px 10px var(--primary-color),
+    0px 0px 15px var(--primary-color);
+}
+
 /* HTML BASIC TAGS */
 
 body {
@@ -97,6 +104,9 @@ section {
 #header_subtitle {
   white-space: nowrap;
   display: inline-block;
+  font-family: Iceland;
+  font-size: 2em;
+  color: var(--console-color);
 }
 
 #welcome {
