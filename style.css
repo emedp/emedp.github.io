@@ -179,18 +179,17 @@ section {
 /* IMG */
 
 .svg_tech {
-  min-width: 20vh;
-  padding: 16px;
-  margin: 8px;
-  border-radius: 8px;
-  display: inline-block;
-  text-align: center;
   color: black;
+  display: inline-block;
+  padding: 16px 32px;
+  margin: 4px;
+  border-radius: 8px;
 }
 
 .img-logo-brand {
   width: 32px;
   height: 32px;
+  vertical-align: middle;
 }
 
 .img-icon128 {
