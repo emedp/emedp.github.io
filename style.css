@@ -84,24 +84,28 @@ section {
 }
 
 #header {
-  height: 10vh;
-  background-color: black;
-  border-bottom: white solid 1px;
-  position: sticky;
-  top: 0;
-  padding: 2em;
+  padding: 4em;
   z-index: 999;
+  height: 80vh;
+  background-color: black;
+  background-image: url(assets/matrix.gif);
+  background-size: cover;
+  border-bottom: white solid 1px;
 }
 
 #header_title {
   white-space: nowrap;
   width: 100%;
   margin: auto;
+  
   text-align: center;
   font-size: 4em;
 }
 
 #header_subtitle {
+  width: 100%;
+  margin: auto;
+  text-align: center;
   white-space: nowrap;
   display: inline-block;
   font-family: Iceland;
@@ -109,22 +113,15 @@ section {
   color: var(--console-color);
 }
 
-#welcome {
-  background-color: black;
-  height: 80vh;
-  background-image: url(assets/matrix.gif);
-  background-size: cover;
-}
-
 #welcome_title {
   font-size: 6em;
 }
 
-#welcome_arrow {
+#scroll_arrow {
   color: var(--console-color);
   font-size: 4em;
   position: absolute;
-  bottom: 16px;
+  bottom: 0px;
   display: inline;
 }
 
@@ -136,7 +133,7 @@ section {
   background-color: var(--bg-grey-light);
 }
 
-#emedpware {
+#dpware {
   background-color: var(--bg-grey-dark);
 }
 
@@ -152,8 +149,7 @@ section {
   margin: 1em;
   padding: 2em;
   display: inline-block;
-  min-height: 700px;
-  max-width: 500px;
+  max-width: 25%;
   vertical-align: top;
 }
 
