@@ -1,323 +1,433 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <title>Eme dp</title>
-        <base href="emedp.github.io">
-        <link rel="canonical" href="https://emedp.github.io" />
-        <link rel="shortcut icon" href="assets/logos/emedp.png" type="image/x-icon">
-        <link rel="stylesheet" href="style.css">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>&lt;/ Eme dp /&gt;</title>
+<link rel="icon" type="image/png" href="/assets/logos/dpware_black.png">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&display=swap');
 
-        <!-- META BLOCK -->
-        <meta charset="UTF-8">
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="language" content="Spanish">
-        <meta name="author" content="emedp">
-        <meta name="title" content="emedp">
-        <meta name="description" content="Página web personal y portfolio">
-        <meta name="keywords" content="portfolio,developer,dev,software,desarrollador,programador">
-        <meta name="robots" content="index, follow">
+  /* =============================================
+     TEMA DE COLOR — cambia aquí fácilmente:
+     OPCIÓN VERDE   : --accent: #39ff14  --accent2: #00fff9  --accent3: #ff00ff
+     OPCIÓN AZUL    : --accent: #00aaff  --accent2: #00fff9  --accent3: #cc00ff
+     OPCIÓN MORADO  : --accent: #bf00ff  --accent2: #ff00ff  --accent3: #00fff9
+  ============================================= */
+  :root{
+    --accent:  #00aaff;
+    --accent2: #00fff9;
+    --accent3: #cc00ff;
+    --amber:   #ffb700;
+    --bg:      #020810;
+    --panel:   #060f1a;
+    --border:  #0a2a40;
+    --text:    var(--accent);
+    --dim:     #1a3a50;
+    --nav-link:#7ecfff;   /* azul claro legible para nav */
+  }
 
-        <!-- SCRIPTS -->
-        <script src="../js/main.js"></script>
-        <!-- google search console verification -->
-        <meta name="google-site-verification" content="3scjwJXuXQMSvN413g4ZmV4J_X1cAKZQVfqGz2Rv-CA" />
-        <!-- google ads -->
-        <script data-ad-client="ca-pub-9934738138092081" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9934738138092081" crossorigin="anonymous"></script>
-        <script async src="https://js.stripe.com/v3/buy-button.js"></script>
-    </head>
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:'Share Tech Mono',monospace;font-size:14px;line-height:1.6;overflow-x:hidden}
 
-    <body>
-        <header id="header">
-            <h1 id="header_title">&lt;&#47; Eme dp &#47;&gt;</h1>
-            <p id="header_subtitle">Software developer<span class="anim-blink">_</span></p>
-            <h2 id="welcome_title" class="console">¡Hola Mundo!</h2>
-            <p id="welcome_body" class="console">
-                Bienvenido a mi página web personal y portfolio.
-                <br>
-                Me llamo Miguel, soy programador de software.
-                <br>
-                Desarrollo apps para móviles, apps de escritorio, scripts, videojuegos y páginas webs.
-            </p>
-            <p id="scroll_arrow" class="console anim-blink">↓</p>
-        </header>
+  body::before{content:'';position:fixed;top:0;left:0;right:0;bottom:0;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,0.03) 2px,rgba(0,0,0,0.03) 4px);pointer-events:none;z-index:9999}
 
-        <main>
+  #grid-base{position:fixed;top:0;left:0;right:0;bottom:0;background-image:linear-gradient(rgba(0,170,255,0.02) 1px,transparent 1px),linear-gradient(90deg,rgba(0,170,255,0.02) 1px,transparent 1px);background-size:40px 40px;pointer-events:none;z-index:0}
+  #grid-spotlight{position:fixed;top:0;left:0;right:0;bottom:0;background-image:linear-gradient(rgba(0,170,255,0.5) 1px,transparent 1px),linear-gradient(90deg,rgba(0,170,255,0.5) 1px,transparent 1px);background-size:40px 40px;pointer-events:none;z-index:0;-webkit-mask-image:radial-gradient(circle 300px at var(--mx,50%) var(--my,50%),black 0%,transparent 100%);mask-image:radial-gradient(circle 300px at var(--mx,50%) var(--my,50%),black 0%,transparent 100%)}
 
-            <section id="projects">
-                <h1>Proyectos</h1>
-                
-                <div id="android-apps">
-                    <div class="columned">
-                        <h2>Atenea</h2>
-                        <img src="assets/logos/atenea.png" alt="icono Atenea" class="img-icon128">
-                    
-                        <p class="project_description">
-                            <b>Tipo de App:</b> Gestor de contraseñas<br>
-                            <b>Primera publicación:</b> 30/01/2021<br>
-                        </p>
-                        <a target="_blank" href="https://play.google.com/store/apps/details?id=example.digitallife">
-                            <img src="assets/logos/google-play-badge.png" alt="Disponible en Google Play" class="img-badge">
-                        </a>
-                        <p>
-                            Primera app que publiqué en 2018 con otro nombre, con la idea del proyecto Olympics la volví a lanzar con el nombre de Atenea.
-                            <br>
-                            <br>
-                            Pensada para dar solución a ese tipo de personas que les importa proteger su vida digital.
-                            Los expertos en seguridad recomiendan usar una contraseña distinta para cada cuenta, 
-                            pero puesto que hoy en día utilizamos demasiadas cuentas como para acordarnos de cada una de ellas,
-                            Atenea sirve de baúl seguro donde apuntar cada cuenta y su contraseña. Mucho mejor que un papel o el
-                            bloc de notas.
-                        </p>
-                    </div>
+  /* NAV */
+  nav{position:fixed;top:0;left:0;right:0;background:rgba(2,8,16,0.95);border-bottom:1px solid var(--accent);padding:10px 40px;display:flex;align-items:center;justify-content:space-between;z-index:1000;backdrop-filter:blur(4px);gap:16px}
+  .nav-logo{color:var(--accent);font-family:'Orbitron',monospace;font-size:16px;font-weight:700;letter-spacing:2px;white-space:nowrap;flex-shrink:0}
+  .nav-logo span{color:var(--accent2)}
+  .nav-links{display:flex;gap:24px;flex-shrink:1;min-width:0;overflow:hidden}
+  .nav-links a{color:var(--nav-link);text-decoration:none;font-size:11px;letter-spacing:2px;transition:color .2s;white-space:nowrap}
+  .nav-links a:hover{color:#fff}
+  .nav-hamburger{display:none;background:transparent;border:1px solid var(--border);color:var(--nav-link);cursor:pointer;padding:6px 10px;font-size:16px;line-height:1;flex-shrink:0}
+  .nav-hamburger:hover{border-color:var(--accent);color:#fff}
+  .nav-dropdown{display:none;position:fixed;top:45px;right:0;left:0;background:rgba(2,8,16,0.97);border-bottom:1px solid var(--accent);padding:12px 0;z-index:999;flex-direction:column}
+  .nav-dropdown.open{display:flex}
+  .nav-dropdown a{color:var(--nav-link);text-decoration:none;font-size:11px;letter-spacing:2px;padding:10px 24px;transition:color .2s,background .2s}
+  .nav-dropdown a:hover{color:#fff;background:rgba(0,170,255,0.06)}
+  @media(max-width:600px){.nav-links{display:none}.nav-hamburger{display:block}}
 
-                    <div class="columned">
-                        <h2>GBT</h2>
-                        <img src="assets/logos/gesture_builder.png" alt="icono Gesture Builder Tool" class="img-icon128">
-                        
-                        <p class="project_description">
-                            <b>Tipo de App:</b> Developer Tool<br>
-                            <b>Primera publicación:</b> 02/10/2021<br>
-                        </p>
-                        <a target="_blank" href="https://play.google.com/store/apps/details?id=migueldp.runeforge">
-                            <img src="assets/logos/google-play-badge.png" alt="Disponible en Google Play" class="img-badge">
-                        </a>
-                        <p>
-                            Gesture Builder Tool, es una app que nace de la necesidad de usar la librería "Gestures" de Android para un proyecto mayor.
-                            Esta librería permite leer los patrones dibujados en pantalla, 
-                            pero para ello es necesario crear previamente un archivo con los gestos pre-guardados.
-                            ¿Cómo crear los gestos desde Android Studio? pues bien, no se puede.
-                            <br>
-                            <br>
-                            Así que decidí crear esta app para facilitar el desarrollo al resto de programadores Android, 
-                            quienes sólo tienen que descargar la app, usarla para crear sus gestos, y exportar el archivo a su proyecto.
-                        </p>
-                    </div>
-                    
-                    <div class="columned">
-                        <h2>Runas</h2>
-                        <img src="assets/logos/runas.png" alt="icono Runas" class="img-icon128">
-                        
-                        <p class="project_description">
-                            <b>Tipo de App:</b> Aprendizaje<br>
-                            <b>Primera publicación:</b> 05/05/2023<br>
-                        </p>
-                        <a target="_blank" href="https://play.google.com/store/apps/details?id=emedpware.runes">
-                            <img src="assets/logos/google-play-badge.png" alt="Disponible en Google Play" class="img-badge">
-                        </a>
-                        <p>
-                            App de juego interactivo, donde jugando aprenderás el alfabeto rúnico y un montón de datos sobre cada runa.
-                            <br>
-                            Aprender las runas de esta manera divertida incluso competitiva es la que tienes que probar si te interesa 
-                            el mundo antiguo de los vikingos y sus símbolos, la magia que rodea cada runa y cuál era la profesión de los erilaz.
-                        </p>
-                    </div>
-                </div>
-                
-                <div id="webpage" class="columned">
-                    <h2>Página web</h2>
-                
-                    <img src="assets/logos/emedp.png" alt="icono emedpware" class="img-icon128">
-                    <p class="project_description">
-                        <b>Primera publicación:</b> 20/03/2022<br>
-                    </p>
-                    <br>
-                    <p>
-                        Creo que todo dev que se precie, necesita una "landing page" a modo de portfolio donde mostrar sus proyectos. Además, distingue de otros CVs en un proceso de selección.
-                        <br>
-                        Es una valiosísima práctica que aporta mucho valor.
-                        Se aprende muchísimo con este proyecto: Lo primero, web (si eres otro tipo de dev), CI/CD, SEO, branding...
-                        <br>
-                        Y las cosas que sigo aprendiendo en mi día a día y las que descubro en lo que trabajo y actualizo esta web.
-                    </p>
-                </div>
-            </section>
+  #main-content{display:none}
+  section{position:relative;z-index:1;padding:100px 40px 60px;max-width:900px;margin:0 auto}
 
-            <section id="CV">
-                <h1>Stack tecnológico</h1>
-                <p>
-                    Aquí encontrarás mi área de conocimento, lenguajes de programación, frameworks, programas...
-                    <br>
-                    Las cuales considero de mi zona de confort ya que sumo bastantes horas de aprendizaje y uso en cada una de ellas.
-                    <br>
-                    Me gusta aprender y probar nuevas tecnologías, pero prefiero dominar unas pocas y usarlas bien.
-                    Continuamente intento mejorar ya sea aprendiendo cosas nuevas, actualizandome de las que ya conozco o practicando sobre mi stack.
-                </p>
-                <div>
-                    <div class="knowledges">
-                        <h4>Lenguajes de programación</h4>
-                        <ul>
-                            <li class="svg_tech" style="background-color: #7F52FF;">
-                                <img class="img-logo-brand" src="assets/icons/kotlin.svg" alt="Kotlin"> Kotlin
-                            </li>
-                            <li class="svg_tech" style="background-color: #f29111;">
-                                <img class="img-logo-brand" src="assets/icons/java.svg" alt="Java"> Java
-                            </li>
-                            <li class="svg_tech" style="background-color: #3776AB;">
-                                <img class="img-logo-brand" src="assets/icons/python.svg" alt="Python"> Python
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="knowledges">
-                        <h4>Desarrollo Mobile</h4>
-                        <ul>
-                            <li class="svg_tech" style="background-color: #3DDC84;">
-                                <img class="img-logo-brand" src="assets/icons/androidstudio.svg" alt="Android Studio"> Android Studio
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="knowledges">
-                        <h4>Desarrollo Web</h4>
-                        <ul>
-                            <li class="svg_tech" style="background-color: #E34F26;">
-                                <img class="img-logo-brand" src="assets/icons/html5.svg" alt="HTML5"> HTML5
-                            </li>
-                            <li class="svg_tech" style="background-color: #1572B6;">
-                                <img class="img-logo-brand" src="assets/icons/css3.svg" alt="CSS3"> CSS3
-                            </li>
-                            <li class="svg_tech" style="background-color: #F7DF1E;">
-                                <img class="img-logo-brand" src="assets/icons/javascript.svg" alt="Javascript"> Javascript
-                            </li>
-                            <li class="svg_tech" style="background-color: #7952B3;">
-                                <img class="img-logo-brand" src="assets/icons/bootstrap.svg" alt="Bootstrap"> Bootstrap
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="knowledges">
-                        <h4>Diseño Gráfico y 3D </h4>
-                        <ul>
-                            <li class="svg_tech" style="background-color: #F5792A;">
-                                <img class="img-logo-brand" src="assets/icons/blender.svg" alt="Blender"> Blender
-                            </li>
-                            <li class="svg_tech" style="background-color: #ffffff;">
-                                <img class="img-logo-brand" src="assets/icons/inkscape.svg" alt="Inkscape"> Inkscape
-                            </li>
-                            <li class="svg_tech" style="background-color: #5C5543;">
-                                <img class="img-logo-brand" src="assets/icons/gimp.svg" alt="Gimp"> Gimp
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="knowledges">
-                        <h4>Otros</h4>
-                        <ul>
-                            <li class="svg_tech" style="background-color: #F05032;">
-                                <img class="img-logo-brand" src="assets/icons/git.svg" alt="Git"> Git
-                            </li>
-                            <li class="svg_tech" style="background-color: #FFFFFF;">
-                                <img class="img-logo-brand" src="assets/icons/unity.svg" alt="Unity"> Unity
-                            </li>
-                            <li class="svg_tech" style="background-color: #00979D;">
-                                <img class="img-logo-brand" src="assets/icons/arduino.svg" alt="Arduino"> Arduino
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
+  /* HERO */
+  #hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;padding-top:80px;text-align:left}
+  #hero > *{width:100%;max-width:660px}
 
-            <section id="dpware">
-                <h1>dp Ware</h1>
-                <div class="background_logo">
-                    <img class="logo_brand" src="assets/logos/emedpware_m.png" alt="icono dpware mediano">
-                    <img class="logo_brand" src="assets/logos/emedpware_s.png" alt="icono dpware pequeño">
-                    <img class="logo_brand" src="assets/logos/emedpware_l.png" alt="icono dpware largo">
-                </div>
-                <p>
-                    
-                </p>
-                <p>
-                    ¿Qué es dp Ware? Es mi marca personal donde ofrecer productos o servicios serios y profesionales.
-                    <br>
-                    dp Ware pretende ser una firma de tecnología que represente calidad y una experiencia satisfactoria. <br>
-                    Considero que el tiempo es el bien más valioso que tenemos. Por ello, la intención es simplificar, optimizar y mejorar los
-                    procesos cotidianos de la vida de las personas. <br> 
-                    Gracias al poder de la tecnología a través del software. Se busca crear apps, webs e incluso videojuegos que cumplan con la visión descrita. <br>
-                    Estos productos podrán ser creaciones de la marca o a encargo de terceros que compartan el mismo objetivo. <br>
-                </p>
+  /* BOOT */
+  #boot-wrapper{position:fixed;top:0;left:0;right:0;bottom:0;z-index:500;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:32px;background:var(--bg)}
+  #boot-seq{display:flex;flex-direction:column;align-items:flex-start}
+  .boot-line{font-size:13px;margin-bottom:6px;display:flex;align-items:center;gap:8px;opacity:0;transition:opacity 0.2s}
+  .boot-line .bl-text{color:var(--dim)}
+  .boot-line .bl-status{color:var(--accent);opacity:0;transition:opacity 0.2s;font-size:12px}
+  .boot-line.warn .bl-status{color:var(--amber)}
+  .boot-enter-btn{font-family:'Share Tech Mono',monospace;font-size:13px;letter-spacing:3px;padding:12px 32px;background:var(--accent);color:#020810;border:none;cursor:pointer;opacity:0;transition:opacity 0.4s,filter 0.2s,box-shadow 0.2s;clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,10px 100%,0 calc(100% - 10px));pointer-events:none;font-weight:700}
+  .boot-enter-btn.visible{opacity:1;pointer-events:auto}
+  .boot-enter-btn:hover{filter:brightness(1.2);box-shadow:0 0 20px rgba(0,170,255,0.5)}
 
-                <h2>Servicios</h2>
-                <ul>
-                    <li>Desarrollo de apps android</li>
-                    <li>Creación de videojuegos</li>
-                    <li>Creación de páginas web</li>
-                    <li>Desarrollo de apps de escritorio</li>
-                    <li>Consultoría para proyectos informáticos</li>
-                    <li>Diseño UI/UX</li>
-                    <li>Creación de diseños gráficos: iconos, logos, banners, etc</li>
-                    <li>Creación de modelos 3D</li>
-                </ul>
+  /* GLITCH */
+  .hero-title{font-family:'Orbitron',monospace;font-size:clamp(32px,6vw,72px);font-weight:900;color:var(--accent);margin:30px 0 8px;letter-spacing:4px;line-height:1.1;text-shadow:0 0 20px rgba(0,170,255,0.4);position:relative}
+  .glitch::before,.glitch::after{content:attr(data-text);position:absolute;top:0;left:0;right:0;font-family:'Orbitron',monospace;font-size:inherit;font-weight:inherit;letter-spacing:inherit;overflow:hidden}
+  .glitch::before{color:var(--accent2);animation:glitch1 3s infinite linear;clip-path:polygon(0 30%,100% 30%,100% 50%,0 50%);left:2px}
+  .glitch::after{color:var(--accent3);animation:glitch2 3s infinite linear;clip-path:polygon(0 60%,100% 60%,100% 80%,0 80%);left:-2px}
+  @keyframes glitch1{0%,90%,100%{opacity:0;transform:translate(0)}92%{opacity:1;transform:translate(-2px,1px)}94%{opacity:0;transform:translate(2px,-1px)}96%{opacity:1;transform:translate(0)}}
+  @keyframes glitch2{0%,90%,100%{opacity:0;transform:translate(0)}93%{opacity:1;transform:translate(2px,-1px)}95%{opacity:0;transform:translate(-2px,1px)}97%{opacity:1;transform:translate(0)}}
 
-                <h2>Donación</h2>
-                <p>
-                    Si te gusta mi trabajo y quieres apoyarme, puedes hacer una donación.
-                    <br>
-                    Cualquier aportación, por pequeña que sea, es bienvenida y me ayuda a seguir creando y mejorando mis proyectos.
-                </p>
-                <div style="margin-top: 3em;">
-                    <stripe-buy-button buy-button-id="buy_btn_1O6kn7LsV3hcl4QVFj6Csg9K"
-                        publishable-key="pk_live_51LIMywLsV3hcl4QVz0ikFR3QKmtJ1apWx5j9pN63qOL0LJTxwXo28vdubMVdw81PDNi1M2aX9FK2EfchCIkefGoq00PD1BAa9f">
-                    </stripe-buy-button>
-                </div>
-            </section>
+  .hero-subtitle{font-size:16px;color:var(--accent2);letter-spacing:3px;margin-bottom:20px}
+  .hero-desc{color:var(--text);max-width:560px;margin-bottom:32px;line-height:1.8}
+  .hero-desc .prompt{color:var(--accent)}
+  .cursor{display:inline-block;width:10px;height:16px;background:var(--accent);animation:blink .7s step-end infinite;vertical-align:middle;margin-left:2px}
+  @keyframes blink{50%{opacity:0}}
 
-        </main>
+  /* BUTTONS */
+  .btn-group{display:flex;gap:12px;flex-wrap:wrap}
+  .btn{padding:10px 24px;font-family:'Share Tech Mono',monospace;font-size:12px;letter-spacing:2px;cursor:pointer;border:none;text-decoration:none;transition:all .2s;display:inline-block;clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,10px 100%,0 calc(100% - 10px))}
+  .btn-primary{background:var(--accent);color:#020810;font-weight:700}
+  .btn-primary:hover{filter:brightness(1.2);box-shadow:0 0 20px rgba(0,170,255,0.6)}
+  .btn-secondary{background:var(--accent3);color:#020810;font-weight:700}
+  .btn-secondary:hover{filter:brightness(1.2);box-shadow:0 0 20px rgba(204,0,255,0.6)}
 
-        <footer>
-            <section id="rrss">
-                <h2>Redes Sociales</h2>
-            
-                <div>
-                    <h3>Developer</h2>
-            
-                        <a target="_blank" class="rrss_link" style="background-color: #689f38;"
-                            href="https://play.google.com/store/apps/dev?id=9180314146924738339">
-                            <img class="img-logo-brand" src="assets/icons/google_play.svg" alt="Google Play Store">
-                        </a>
+  .sec-header{display:flex;align-items:center;gap:12px;margin-bottom:40px}
+  .sec-tag{color:var(--accent3);font-size:11px;letter-spacing:3px}
+  .sec-title{font-family:'Orbitron',monospace;font-size:20px;font-weight:700;color:var(--accent);letter-spacing:3px}
+  .sec-line{flex:1;height:1px;background:linear-gradient(to right,var(--border),transparent)}
 
-                        <a target="_blank" class="rrss_link" style="background-color: #272b33;" href="https://github.com/emedp">
-                            <img class="img-logo-brand" src="assets/icons/github.svg" alt="GitHub">
-                        </a>
-            
-                        <a target="_blank" class="rrss_link" style="background-color: #1e1f26;" href="https://codepen.io/emedp">
-                            <img class="img-logo-brand" src="assets/icons/codepen.svg" alt="CodePen">
-                        </a>
+  .panel{background:var(--panel);border:1px solid var(--border);border-left:3px solid var(--accent);padding:20px 24px;margin-bottom:16px;position:relative}
+  .panel::before{content:attr(data-label);position:absolute;top:-10px;left:16px;background:var(--panel);padding:0 8px;font-size:10px;color:var(--accent2);letter-spacing:2px}
 
-                        <a target="_blank" class="rrss_link" style="background-color: #FF0000;" href="https://www.youtube.com/@emedp">
-                            <img class="img-logo-brand" src="assets/icons/youtube.svg" alt="YouTube Emedp">
-                        </a>                
-            
-                </div>
-            
-                <div>
-                    <h3>Personales</h3>
+  .log-line{color:var(--accent);font-size:12px;margin-bottom:6px}
+  .log-line .ts{color:var(--accent2);margin-right:8px}
+  .log-line .tag{color:var(--accent)}
+  .log-line .val{color:var(--text)}
 
-                    <a target="_blank" class="rrss_link" style="background-color: #0077b5;"
-                        href="https://www.linkedin.com/in/migueldinizp/">
-                        <img class="img-logo-brand" src="assets/icons/linkedin.svg" alt="LinkedIn">
-                    </a>
-            
-                    <a target="_blank" class="rrss_link" style="background-color: #e1306c;"
-                        href="https://www.instagram.com/mikysdp">
-                        <img class="img-logo-brand" src="assets/icons/instagram.svg" alt="Instagram">
-                    </a>
+  /* PROJECTS */
+  .projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+  .proj-card{background:var(--panel);border:1px solid var(--border);padding:20px;position:relative;transition:border-color .2s,transform .2s;overflow:hidden;display:flex;flex-direction:column}
+  .proj-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(to right,var(--accent),transparent)}
+  .proj-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+  .proj-card:hover::before{background:linear-gradient(to right,var(--accent2),var(--accent))}
+  .proj-icon{width:56px;height:56px;object-fit:contain;margin-bottom:12px}
+  .proj-type{font-size:10px;color:var(--accent3);letter-spacing:2px;margin-bottom:8px}
+  .proj-name{font-family:'Orbitron',monospace;font-size:16px;font-weight:700;color:var(--accent);margin-bottom:8px}
+  .proj-desc{color:var(--text);font-size:12px;line-height:1.7;margin-bottom:16px;flex:1}
+  .proj-footer{border-top:1px solid var(--border);padding-top:10px;display:flex;flex-direction:column;gap:10px}
+  .proj-date{font-size:10px;color:var(--dim)}
+  .proj-date span{color:var(--amber)}
+  .proj-play{display:block;width:100%}
+  .proj-play img{width:100%;height:auto;display:block;opacity:.85;transition:opacity .2s}
+  .proj-play:hover img{opacity:1}
 
-                    <a target="_blank" class="rrss_link" style="background-color: #9146FF;" href="https://www.twitch.tv/mikysdp">
-                        <img class="img-logo-brand" src="assets/icons/twitch.svg" alt="Twitch">
-                    </a>
+  /* STACK */
+  .stack-group{margin-bottom:28px}
+  .stack-label{font-size:10px;color:var(--accent3);letter-spacing:3px;margin-bottom:12px}
+  .stack-items{display:flex;flex-wrap:wrap;gap:8px}
+  .stack-tag{background:rgba(0,170,255,0.12);border:1px solid rgba(0,170,255,0.3);padding:7px 14px;font-size:11px;color:var(--accent2);letter-spacing:1px;transition:all .2s;display:flex;align-items:center;gap:7px}
+  .stack-tag img{width:16px;height:16px;object-fit:contain;filter:brightness(0) invert(1);opacity:.8;transition:opacity .2s}
+  .stack-tag:hover{border-color:var(--accent2);background:rgba(0,170,255,0.22);color:var(--accent);box-shadow:0 0 10px rgba(0,170,255,0.2)}
+  .stack-tag:hover img{opacity:1}
 
-                    <a target="_blank" class="rrss_link" style="background-color: #FF0000;"
-                        href="https://www.youtube.com/@mikysdp">
-                        <img class="img-logo-brand" src="assets/icons/youtube.svg" alt="YouTube Emedp Games">
-                    </a>
-            
-                    <a target="_blank" class="rrss_link" style="background-color: #FF0000;"
-                        href="https://www.youtube.com/@emedpgames">
-                        <img class="img-logo-brand" src="assets/icons/youtube.svg" alt="YouTube Emedp Games">
-                    </a>
-            
-                </div>
-            </section>
-        </footer>
-    </body>
+  /* SERVICES */
+  .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+  .svc-item{background:rgba(0,170,255,0.08);border:1px solid rgba(0,170,255,0.2);border-left:2px solid var(--accent2);padding:12px 16px;font-size:12px;color:var(--text);transition:all .2s}
+  .svc-item::before{content:'> ';color:var(--accent)}
+  .svc-item:hover{border-left-color:var(--accent3);color:var(--accent2);background:rgba(0,170,255,0.16)}
+
+  /* DPWARE LOGOS */
+  .dpware-logos{display:flex;gap:20px;align-items:center;flex-wrap:wrap;margin-bottom:24px;padding:16px 20px;background:rgba(255, 255, 255, 0.807);border:1px solid rgba(204,0,255,0.2)}
+  .dpware-logos img{height:40px;object-fit:contain;opacity:.85;filter:brightness(1.1);transition:opacity .2s}
+  .dpware-logos img:hover{opacity:1}
+
+  /* DONATION */
+  .donation-panel{background:rgba(204,0,255,0.06);border:1px solid rgba(204,0,255,0.3);border-left:3px solid var(--accent3);padding:20px 24px;margin-top:32px;position:relative}
+  .donation-panel::before{content:'DONATION.SH';position:absolute;top:-10px;left:16px;background:var(--panel);padding:0 8px;font-size:10px;color:var(--accent3);letter-spacing:2px}
+  .donation-panel p{font-size:12px;color:var(--text);line-height:1.8;margin-bottom:16px}
+  .donation-panel p span{color:var(--accent2)}
+
+  /* SOCIAL LINKS */
+  .social-group-label{font-size:10px;color:var(--accent3);letter-spacing:3px;margin:20px 0 10px}
+  .social-links{display:flex;gap:10px;flex-wrap:wrap}
+  .social-link{background:rgba(0,170,255,0.12);border:1px solid rgba(0,170,255,0.3);padding:8px 14px;font-size:11px;color:var(--nav-link);text-decoration:none;letter-spacing:2px;transition:all .2s;display:flex;align-items:center;gap:8px}
+  .social-link img{width:16px;height:16px;object-fit:contain;filter:brightness(0) invert(1);opacity:.7;transition:opacity .2s}
+  .social-link:hover{color:#fff;border-color:var(--accent);background:rgba(0,170,255,0.22)}
+  .social-link:hover img{opacity:1}
+
+  footer{border-top:1px solid var(--border);padding:20px 40px;text-align:center;font-size:11px;color:var(--dim);position:relative;z-index:1}
+  footer span{color:var(--accent)}
+
+  .dpware-badge{display:inline-block;background:rgba(204,0,255,0.08);border:1px solid rgba(204,0,255,0.4);padding:16px 24px;margin-bottom:20px}
+  .dpware-badge .dw-title{font-family:'Orbitron',monospace;font-size:22px;font-weight:900;color:var(--accent3);letter-spacing:4px;text-shadow:0 0 24px rgba(204,0,255,0.7)}
+  .dpware-badge .dw-sub{font-size:10px;color:var(--dim);letter-spacing:3px;margin-top:4px}
+</style>
+</head>
+<body>
+
+<div id="grid-base"></div>
+<div id="grid-spotlight"></div>
+
+<nav>
+  <div class="nav-logo"><span>&lt;/</span> Eme dp <span>/&gt;</span></div>
+  <div class="nav-links">
+    <a href="#about">ABOUT</a><a href="#projects">PROJECTS</a>
+    <a href="#stack">STACK</a><a href="#services">SERVICES</a><a href="#contact">CONTACT</a>
+  </div>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menú">&#9776;</button>
+</nav>
+<div class="nav-dropdown" id="nav-dropdown">
+  <a href="#about" class="dd-link">ABOUT</a><a href="#projects" class="dd-link">PROJECTS</a>
+  <a href="#stack" class="dd-link">STACK</a><a href="#services" class="dd-link">SERVICES</a>
+  <a href="#contact" class="dd-link">CONTACT</a>
+</div>
+
+<div id="boot-wrapper">
+  <div id="boot-seq"></div>
+  <button class="boot-enter-btn" id="boot-enter-btn">[ ENTER ]</button>
+</div>
+
+<div id="main-content">
+
+<section id="hero">
+  <h1 class="hero-title glitch" data-text="&lt;/ EMEDP /&gt;">&lt;/ EMEDP /&gt;</h1>
+  <p class="hero-subtitle">SOFTWARE DEVELOPER<span class="cursor"></span></p>
+  <p class="hero-desc">
+    <span class="prompt">$ </span>Hello World! Soy <strong style="color:var(--accent2)">Miguel</strong>, programador de software.<br>
+    Desarrollo apps móviles, de escritorio, scripts, videojuegos y páginas web.<br>
+    Fundador de <span style="color:var(--accent3)">dp Ware</span> — tecnología que simplifica tu vida.
+  </p>
+  <div class="btn-group">
+    <a href="#projects" class="btn btn-primary">[ ver proyectos ]</a>
+    <a href="#contact" class="btn btn-secondary">[ contactar ]</a>
+  </div>
+</section>
+
+<section id="about">
+  <div class="sec-header"><span class="sec-tag">// 01</span><span class="sec-title">ABOUT.LOG</span><div class="sec-line"></div></div>
+  <div class="panel" data-label="SYSTEM_INFO">
+    <div class="log-line"><span class="ts">[SYS]</span><span class="tag">ALIAS</span> <span class="val">= Miguel — emedp</span></div>
+    <div class="log-line"><span class="ts">[SYS]</span><span class="tag">ROLE</span> <span class="val">= Software Developer</span></div>
+    <div class="log-line"><span class="ts">[SYS]</span><span class="tag">BRAND</span> <span class="val">= dp Ware</span></div>
+    <div class="log-line"><span class="ts">[SYS]</span><span class="tag">FOCUS</span> <span class="val">= Apps móviles · Web · Desktop · Videojuegos</span></div>
+    <div class="log-line"><span class="ts">[SYS]</span><span class="tag">STATUS</span> <span class="val" style="color:var(--accent)">AVAILABLE_FOR_PROJECTS</span></div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="sec-header"><span class="sec-tag">// 02</span><span class="sec-title">PROJECTS.DIR</span><div class="sec-line"></div></div>
+  <div class="projects-grid">
+    <div class="proj-card">
+      <img class="proj-icon" src="/assets/logos/atenea.png" alt="Atenea">
+      <div class="proj-type">APP_TYPE :: GESTOR_CONTRASEÑAS</div>
+      <div class="proj-name">ATENEA</div>
+      <div class="proj-desc">Baúl seguro para tus cuentas y contraseñas. Protege tu vida digital. Mucho mejor que un papel.</div>
+      <div class="proj-footer">
+        <div class="proj-date">FIRST_RELEASE :: <span>30.01.2021</span></div>
+        <a class="proj-play" href="https://play.google.com/store/apps/details?id=example.digitallife" target="_blank">
+          <img src="/assets/logos/google_play_badge.png" alt="Disponible en Google Play">
+        </a>
+      </div>
+    </div>
+    <div class="proj-card">
+      <img class="proj-icon" src="/assets/logos/gesture_builder_tool.png" alt="Gesture Builder Tool">
+      <div class="proj-type">APP_TYPE :: DEVELOPER_TOOL</div>
+      <div class="proj-name">GESTURE BUILDER TOOL</div>
+      <div class="proj-desc">Crea y exporta archivos de gestos para la librería Android Gestures. Nació de una necesidad real de desarrollo. Para devs, por un dev.</div>
+      <div class="proj-footer">
+        <div class="proj-date">FIRST_RELEASE :: <span>02.10.2021</span></div>
+        <a class="proj-play" href="https://play.google.com/store/apps/details?id=migueldp.runeforge" target="_blank">
+          <img src="/assets/logos/google_play_badge.png" alt="Disponible en Google Play">
+        </a>
+      </div>
+    </div>
+    <div class="proj-card">
+      <img class="proj-icon" src="/assets/logos/runas.png" alt="Runas">
+      <div class="proj-type">APP_TYPE :: APRENDIZAJE_INTERACTIVO</div>
+      <div class="proj-name">RUNAS</div>
+      <div class="proj-desc">Aprende el alfabeto rúnico jugando. Modo competitivo, datos históricos de cada runa, la magia vikinga y el oficio de los erilaz. Divertido y adictivo.</div>
+      <div class="proj-footer">
+        <div class="proj-date">FIRST_RELEASE :: <span>05.05.2023</span></div>
+        <a class="proj-play" href="https://play.google.com/store/apps/details?id=emedpware.runes" target="_blank">
+          <img src="/assets/logos/google_play_badge.png" alt="Disponible en Google Play">
+        </a>
+      </div>
+    </div>
+    <div class="proj-card">
+      <img class="proj-icon" src="/assets/logos/dpware_black.png" alt="emedp web">
+      <div class="proj-type">APP_TYPE :: PORTFOLIO_WEB</div>
+      <div class="proj-name">EMEDP.IO</div>
+      <div class="proj-desc">Esta misma página. Todo dev que se precie necesita una landing page. CI/CD, SEO, branding y aprendizaje continuo. Un proyecto vivo en constante evolución.</div>
+      <div class="proj-footer">
+        <div class="proj-date">FIRST_RELEASE :: <span>20.03.2022</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="stack">
+  <div class="sec-header"><span class="sec-tag">// 03</span><span class="sec-title">TECH.STACK</span><div class="sec-line"></div></div>
+  <div class="stack-group">
+    <div class="stack-label">LENGUAJES_DE_PROGRAMACIÓN</div>
+    <div class="stack-items">
+      <div class="stack-tag"><img src="/assets/icons/kotlin.svg" alt="">Kotlin</div>
+      <div class="stack-tag"><img src="/assets/icons/java.svg" alt="">Java</div>
+      <div class="stack-tag"><img src="/assets/icons/python.svg" alt="">Python</div>
+      <div class="stack-tag">Swift</div>
+      <div class="stack-tag"><img src="/assets/icons/javascript.svg" alt="">JavaScript</div>
+    </div>
+  </div>
+  <div class="stack-group">
+    <div class="stack-label">DESARROLLO_MÓVIL</div>
+    <div class="stack-items">
+      <div class="stack-tag"><img src="/assets/icons/androidstudio.svg" alt="">Android Studio</div>
+      <div class="stack-tag">Xcode</div>
+    </div>
+  </div>
+  <div class="stack-group">
+    <div class="stack-label">DESARROLLO_WEB</div>
+    <div class="stack-items">
+      <div class="stack-tag"><img src="/assets/icons/html5.svg" alt="">HTML5</div>
+      <div class="stack-tag"><img src="/assets/icons/css3.svg" alt="">CSS3</div>
+      <div class="stack-tag"><img src="/assets/icons/javascript.svg" alt="">JavaScript</div>
+      <div class="stack-tag"><img src="/assets/icons/bootstrap.svg" alt="">Bootstrap</div>
+    </div>
+  </div>
+  <div class="stack-group">
+    <div class="stack-label">DISEÑO_GRÁFICO_Y_3D</div>
+    <div class="stack-items">
+      <div class="stack-tag"><img src="/assets/icons/blender.svg" alt="">Blender</div>
+      <div class="stack-tag"><img src="/assets/icons/inkscape.svg" alt="">Inkscape</div>
+      <div class="stack-tag"><img src="/assets/icons/gimp.svg" alt="">GIMP</div>
+    </div>
+  </div>
+  <div class="stack-group">
+    <div class="stack-label">OTROS</div>
+    <div class="stack-items">
+      <div class="stack-tag"><img src="/assets/icons/git.svg" alt="">Git</div>
+      <div class="stack-tag"><img src="/assets/icons/unity.svg" alt="">Unity</div>
+      <div class="stack-tag">Unreal Engine</div>
+      <div class="stack-tag"><img src="/assets/icons/arduino.svg" alt="">Arduino</div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="sec-header"><span class="sec-tag">// 04</span><span class="sec-title">dpWARE.SERVICES</span><div class="sec-line"></div></div>
+
+  <div class="dpware-badge">
+    <div class="dw-title">dp Ware</div>
+    <div class="dw-sub">FIRMA_TECNOLÓGICA :: CALIDAD_&_EXPERIENCIA_SATISFACTORIA</div>
+  </div>
+
+  <div class="panel" data-label="MISSION">
+    <div class="log-line"><span class="ts">[INF]</span> <span class="val">El tiempo es el bien más valioso que tenemos.</span></div>
+    <div class="log-line"><span class="ts">[INF]</span> <span class="val">La misión de dp Ware es simplificar, optimizar y mejorar los procesos cotidianos.</span></div>
+    <div class="log-line"><span class="ts">[INF]</span> <span class="val" style="color:var(--accent2)">Calidad · Precisión · Experiencia satisfactoria.</span></div>
+  </div>
+
+  <div class="services-grid">
+    <div class="svc-item">Desarrollo de apps móviles</div>
+    <div class="svc-item">Creación de videojuegos</div>
+    <div class="svc-item">Creación de páginas web</div>
+    <div class="svc-item">Apps de escritorio</div>
+    <div class="svc-item">Consultoría informática</div>
+    <div class="svc-item">Diseño UI/UX</div>
+    <div class="svc-item">Diseño gráfico & branding</div>
+    <div class="svc-item">Modelado 3D</div>
+  </div>
+
+  <div class="donation-panel">
+    <p>Si te gusta mi trabajo y quieres apoyarme, puedes hacer una donación.<br>
+    <span>Cualquier aportación, por pequeña que sea, es bienvenida</span> y me ayuda a seguir creando y mejorando mis proyectos.</p>
+    <a href="https://donate.stripe.com/9AQbMPaVA68Qc4U5kk" class="btn btn-secondary">[ donar ]</a>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="sec-header"><span class="sec-tag">// 05</span><span class="sec-title">CONTACT.SH</span><div class="sec-line"></div></div>
+
+  <div class="social-group-label">DEVELOPER</div>
+  <div class="social-links">
+    <a href="https://play.google.com/store/apps/dev?id=9180314146924738339" class="social-link" target="_blank">
+      <img src="/assets/icons/google_play.svg" alt="" onerror="this.style.display='none'">GOOGLE PLAY</a>
+    <a href="https://github.com/emedp" class="social-link" target="_blank">
+      <img src="/assets/icons/github.svg" alt="" onerror="this.style.display='none'">GITHUB</a>
+    <a href="https://codepen.io/emedp" class="social-link" target="_blank">
+      <img src="/assets/icons/codepen.svg" alt="" onerror="this.style.display='none'">CODEPEN</a>
+    <a href="https://www.youtube.com/@emedp" class="social-link" target="_blank">
+      <img src="/assets/icons/youtube.svg" alt="">YOUTUBE — EMEDP</a>
+  </div>
+
+  <div class="social-group-label">PERSONAL</div>
+  <div class="social-links">
+    <a href="https://www.linkedin.com/in/migueldinizp/" class="social-link" target="_blank">
+      <img src="/assets/icons/linkedin.svg" alt="">LINKEDIN</a>
+    <a href="https://www.instagram.com/mikysdp" class="social-link" target="_blank">
+      <img src="/assets/icons/instagram.svg" alt="">INSTAGRAM</a>
+    <a href="https://www.twitch.tv/mikysdp" class="social-link" target="_blank">
+      <img src="/assets/icons/twitch.svg" alt="">TWITCH</a>
+    <a href="https://www.youtube.com/@mikysdp" class="social-link" target="_blank">
+      <img src="/assets/icons/youtube.svg" alt="">YOUTUBE — MIKYSDP</a>
+    <a href="https://www.youtube.com/@emedpgames" class="social-link" target="_blank">
+      <img src="/assets/icons/youtube.svg" alt="">YOUTUBE — EMEDP GAMES</a>
+  </div>
+</section>
+
+<footer>
+  <span>&lt;/ Eme dp /&gt;</span> — dp Ware © 2026 — <span>ALL_SYSTEMS_OPERATIONAL</span>
+</footer>
+
+</div>
+
+<script>
+const hamburger=document.getElementById('hamburger');
+const dropdown=document.getElementById('nav-dropdown');
+hamburger.addEventListener('click',()=>dropdown.classList.toggle('open'));
+document.querySelectorAll('.dd-link').forEach(a=>a.addEventListener('click',()=>dropdown.classList.remove('open')));
+document.addEventListener('click',e=>{if(!e.target.closest('nav')&&!e.target.closest('#nav-dropdown'))dropdown.classList.remove('open')});
+
+const spotlight=document.getElementById('grid-spotlight');
+document.addEventListener('mousemove',e=>{
+  spotlight.style.setProperty('--mx',e.clientX+'px');
+  spotlight.style.setProperty('--my',e.clientY+'px');
+});
+
+const bootLines=[
+  {t:'LOADING portfolio...',cls:'ok'},
+  {t:'LOADING about info...',cls:'ok'},
+  {t:'LOADING all projects...',cls:'ok'},
+  {t:'LOADING tech stack...',cls:'ok'},
+  {t:'LOADING dp Ware services...',cls:'ok'},
+  {t:'LOADING social links connections...',cls:'ok'},
+  {t:'Boot complete. Welcome, visitor.',cls:''},
+];
+const BOOT_DURATION=2500,LINE_DELAY=200;
+const container=document.getElementById('boot-seq');
+const bootWrapper=document.getElementById('boot-wrapper');
+const mainContent=document.getElementById('main-content');
+const enterBtn=document.getElementById('boot-enter-btn');
+const lineInterval=BOOT_DURATION/bootLines.length;
+
+bootLines.forEach((l,i)=>{
+  const row=document.createElement('div');
+  row.className='boot-line'+(l.cls?' '+l.cls:'');
+  const txt=document.createElement('span');txt.className='bl-text';
+  txt.textContent='['+String(i).padStart(2,'0')+'] '+l.t;
+  const status=document.createElement('span');status.className='bl-status';
+  status.textContent=l.cls==='ok'?'[OK]':l.cls==='warn'?'[WARN]':'';
+  row.appendChild(txt);if(l.cls)row.appendChild(status);
+  container.appendChild(row);
+  setTimeout(()=>{row.style.opacity='1'},i*lineInterval);
+  if(l.cls)setTimeout(()=>{status.style.opacity='1'},i*lineInterval+LINE_DELAY);
+});
+
+setTimeout(()=>enterBtn.classList.add('visible'),BOOT_DURATION+200);
+enterBtn.addEventListener('click',()=>{
+  bootWrapper.style.transition='opacity 0.5s';
+  bootWrapper.style.opacity='0';
+  setTimeout(()=>{bootWrapper.remove();mainContent.style.display='block'},500);
+});
+</script>
+</body>
 </html>
